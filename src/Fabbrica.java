@@ -18,7 +18,7 @@ public class Fabbrica {
         Scanner Tastiera = new Scanner(System.in);
         ArrayList<Camicia> Magazzino = new ArrayList<>();
         Filatura filatura = new Filatura("giordano bianchi");
-        Cucitura cucitura = new Cucitura("lucia neri");
+
         System.out.print("inserisci il numero di camicie da produrre:");
         int numeroCamicie = Tastiera.nextInt();
         Tastiera.nextLine();
@@ -31,6 +31,7 @@ public class Fabbrica {
         }
 
         for (int i = 0; i < numeroCamicie; i++) {
+            Cucitura cucitura = new Cucitura("lucia neri");
             System.out.println("inserisci la taglia della camicia da produrre:");
             String taglia = Tastiera.nextLine();
             System.out.println("inserisci il colore della camicia:");
